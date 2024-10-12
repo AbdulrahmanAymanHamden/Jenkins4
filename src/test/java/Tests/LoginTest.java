@@ -56,5 +56,20 @@ public class LoginTest extends TestBase{
         loginPage.loginBtn().click();
     }
 
+    @Test(priority = 4)
+    public void validateLoginWithInvalidUsernameAndPassword()
+    {
+        // TC_03 Login using valid username and invalid password
+        // 1. Navigate to login page
+        driver.navigate().to("https://the-internet.herokuapp.com/login");
+        // 2. Locate username and enter username
+        loginPage.username().sendKeys("invalid");
+        // 3. Locate password and enter password
+        loginPage.password().sendKeys("invalid!");
+        // 4. Locate login button and click login button
+        loginPage.loginBtn().click();
+    }
+
+
 
 }
