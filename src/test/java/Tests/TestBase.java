@@ -8,7 +8,7 @@ import org.testng.annotations.*;
 
 public class TestBase {
 
-    WebDriver driver ;
+     WebDriver driver ;
 
     @BeforeClass
     public void openBrowser()
